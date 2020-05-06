@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		473A854124619628002EFB5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A854024619628002EFB5B /* AppDelegate.swift */; };
 		473A854324619628002EFB5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A854224619628002EFB5B /* SceneDelegate.swift */; };
-		473A854524619628002EFB5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A854424619628002EFB5B /* ViewController.swift */; };
 		473A854824619628002EFB5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473A854624619628002EFB5B /* Main.storyboard */; };
 		473A854A2461962B002EFB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473A85492461962B002EFB5B /* Assets.xcassets */; };
 		473A854D2461962B002EFB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473A854B2461962B002EFB5B /* LaunchScreen.storyboard */; };
+		473A855A24625751002EFB5B /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A855924625751002EFB5B /* WelcomeController.swift */; };
+		473A855C24625E44002EFB5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A855B24625E44002EFB5B /* Extensions.swift */; };
+		473A855F24626742002EFB5B /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A855E24626742002EFB5B /* CustomLabel.swift */; };
+		473A856224626D38002EFB5B /* Anton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 473A856124626D37002EFB5B /* Anton-Regular.ttf */; };
+		473A85642462701A002EFB5B /* Arvo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 473A856324627019002EFB5B /* Arvo-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		473A853D24619628002EFB5B /* CurrencyCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		473A854024619628002EFB5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		473A854224619628002EFB5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		473A854424619628002EFB5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		473A854724619628002EFB5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		473A85492461962B002EFB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		473A854C2461962B002EFB5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		473A854E2461962B002EFB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		473A855924625751002EFB5B /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		473A855B24625E44002EFB5B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		473A855E24626742002EFB5B /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		473A856124626D37002EFB5B /* Anton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anton-Regular.ttf"; sourceTree = "<group>"; };
+		473A856324627019002EFB5B /* Arvo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arvo-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		473A853F24619628002EFB5B /* CurrencyCheck */ = {
 			isa = PBXGroup;
 			children = (
+				473A855D2462671E002EFB5B /* Custom */,
+				473A8558246256AA002EFB5B /* Controller */,
+				473A85572462569F002EFB5B /* View */,
+				473A85562462567B002EFB5B /* Model */,
+				473A85542462564F002EFB5B /* Utils */,
 				473A854024619628002EFB5B /* AppDelegate.swift */,
 				473A854224619628002EFB5B /* SceneDelegate.swift */,
-				473A854424619628002EFB5B /* ViewController.swift */,
 				473A854624619628002EFB5B /* Main.storyboard */,
 				473A85492461962B002EFB5B /* Assets.xcassets */,
 				473A854B2461962B002EFB5B /* LaunchScreen.storyboard */,
 				473A854E2461962B002EFB5B /* Info.plist */,
 			);
 			path = CurrencyCheck;
+			sourceTree = "<group>";
+		};
+		473A85542462564F002EFB5B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				473A856024626B51002EFB5B /* Fonts */,
+				473A855B24625E44002EFB5B /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		473A85562462567B002EFB5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		473A85572462569F002EFB5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		473A8558246256AA002EFB5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				473A855924625751002EFB5B /* WelcomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		473A855D2462671E002EFB5B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				473A855E24626742002EFB5B /* CustomLabel.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		473A856024626B51002EFB5B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				473A856324627019002EFB5B /* Arvo-Regular.ttf */,
+				473A856124626D37002EFB5B /* Anton-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +185,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473A856224626D38002EFB5B /* Anton-Regular.ttf in Resources */,
+				473A85642462701A002EFB5B /* Arvo-Regular.ttf in Resources */,
 				473A854D2461962B002EFB5B /* LaunchScreen.storyboard in Resources */,
 				473A854A2461962B002EFB5B /* Assets.xcassets in Resources */,
 				473A854824619628002EFB5B /* Main.storyboard in Resources */,
@@ -138,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				473A854524619628002EFB5B /* ViewController.swift in Sources */,
 				473A854124619628002EFB5B /* AppDelegate.swift in Sources */,
+				473A855F24626742002EFB5B /* CustomLabel.swift in Sources */,
+				473A855A24625751002EFB5B /* WelcomeController.swift in Sources */,
 				473A854324619628002EFB5B /* SceneDelegate.swift in Sources */,
+				473A855C24625E44002EFB5B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
