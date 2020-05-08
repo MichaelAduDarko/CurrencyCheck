@@ -17,6 +17,7 @@
 		473A855F24626742002EFB5B /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A855E24626742002EFB5B /* CustomLabel.swift */; };
 		473A856224626D38002EFB5B /* Anton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 473A856124626D37002EFB5B /* Anton-Regular.ttf */; };
 		473A85642462701A002EFB5B /* Arvo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 473A856324627019002EFB5B /* Arvo-Regular.ttf */; };
+		478FD97E246541F20063CDB9 /* HomeController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FD97D246541F20063CDB9 /* HomeController .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		473A855E24626742002EFB5B /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		473A856124626D37002EFB5B /* Anton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anton-Regular.ttf"; sourceTree = "<group>"; };
 		473A856324627019002EFB5B /* Arvo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arvo-Regular.ttf"; sourceTree = "<group>"; };
+		478FD97D246541F20063CDB9 /* HomeController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeController .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				473A855924625751002EFB5B /* WelcomeController.swift */,
+				478FD97D246541F20063CDB9 /* HomeController .swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				473A854124619628002EFB5B /* AppDelegate.swift in Sources */,
+				478FD97E246541F20063CDB9 /* HomeController .swift in Sources */,
 				473A855F24626742002EFB5B /* CustomLabel.swift in Sources */,
 				473A855A24625751002EFB5B /* WelcomeController.swift in Sources */,
 				473A854324619628002EFB5B /* SceneDelegate.swift in Sources */,

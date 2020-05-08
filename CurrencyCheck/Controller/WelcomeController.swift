@@ -70,7 +70,12 @@ class WelcomeController: UIViewController {
                 self.getStartedButton.transform = CGAffineTransform(scaleX: 1, y: 1)
             }) {(_) in
                 
+                let Controller = HomeController()
                 
+                
+                let nav = UINavigationController(rootViewController: Controller)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
             }
         }
         
@@ -107,7 +112,7 @@ class WelcomeController: UIViewController {
         
         bg.addSubview(getStartedButton)
         getStartedButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        getStartedButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        getStartedButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         getStartedButton.centerXAnchor.constraint(equalTo: bg.centerXAnchor).isActive = true
         getStartedButton.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -60).isActive = true
         
