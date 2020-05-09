@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class ConverterController: UIViewController {
     
     //MARK:- Properties
     
@@ -38,14 +38,14 @@ class HomeController: UIViewController {
         appearance.configureWithOpaqueBackground()
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = .mainBackgroundColor
-        
-        
+
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        
+
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Converter"
+
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
@@ -78,7 +78,12 @@ class HomeController: UIViewController {
                 self.addCountryButton.transform = CGAffineTransform(scaleX: 1, y: 1)
             }) {(_) in
                 
-            
+                let  controller = CountriesController()
+                let  nav = UINavigationController(rootViewController: controller)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+                
+                
             }
         }
         

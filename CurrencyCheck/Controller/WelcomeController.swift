@@ -70,8 +70,7 @@ class WelcomeController: UIViewController {
                 self.getStartedButton.transform = CGAffineTransform(scaleX: 1, y: 1)
             }) {(_) in
                 
-                let Controller = HomeController()
-                
+                let Controller = ConverterController()
                 
                 let nav = UINavigationController(rootViewController: Controller)
                 nav.modalPresentationStyle = .fullScreen
