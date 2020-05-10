@@ -39,7 +39,6 @@ class CountriesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        configureNavigationBar()
         configureSearchController()
     }
     
@@ -55,6 +54,7 @@ class CountriesController: UITableViewController {
     
     func configureUI(){
         view.backgroundColor = .white
+        configureNavigationBar(withTitle: "Countries", prefersLargeTitles: false)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: doneButton)
         
     }
@@ -74,24 +74,6 @@ class CountriesController: UITableViewController {
         }
     }
     
-    func configureNavigationBar(){
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .mainBackgroundColor
-
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.title = "Countries"
-
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
-    }
-        
 }
 
 extension CountriesController: UISearchResultsUpdating {

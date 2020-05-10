@@ -27,36 +27,16 @@ class ConverterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        configureNavigationBar()
-        
-        
-        
+      
     }
     
-    func configureNavigationBar(){
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .mainBackgroundColor
-
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Converter"
-
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
-    }
     
     //MARK:- Helpers
     
     func configureUI(){
         view.backgroundColor = .white
         
-        
+        configureNavigationBar(withTitle: "Converter", prefersLargeTitles: true)
         view.addSubview(addCountryButton)
         addCountryButton.setDimensions(width: 56, height: 56)
         addCountryButton.layer.cornerRadius = 56 / 2

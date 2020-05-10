@@ -90,7 +90,25 @@ extension UIView {
 
 
 
+extension UIViewController {
+    func configureNavigationBar(withTitle title: String, prefersLargeTitles: Bool){
+           let appearance = UINavigationBarAppearance()
+           appearance.configureWithOpaqueBackground()
+           appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+           appearance.backgroundColor = .mainBackgroundColor
 
+           navigationController?.navigationBar.standardAppearance = appearance
+           navigationController?.navigationBar.compactAppearance = appearance
+           navigationController?.navigationBar.scrollEdgeAppearance = appearance
+
+           navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
+           navigationItem.title = title
+
+           navigationController?.navigationBar.tintColor = .white
+           navigationController?.navigationBar.isTranslucent = true
+           navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
+       }
+}
 
 
 
