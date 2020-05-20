@@ -8,15 +8,21 @@
 
 import UIKit
 
-class CountriesController: UITableViewController {
+private let reuseIdentifier = "CountriesCell"
+
+class CountriesController: UIViewController {
     
     //MARK:- Properties
     
+    private let tableView = UITableView()
+    
+    let hearderTitles = ["My Countries"]
+    
     private let searchController = UISearchController(searchResultsController: nil)
-       
-       private var inSearchMode: Bool {
-           return searchController.isActive && !searchController.searchBar.text!.isEmpty
-       }
+    
+    private var inSearchMode: Bool {
+        return searchController.isActive && !searchController.searchBar.text!.isEmpty
+    }
     
     
     private lazy var doneButton: UIButton = {
@@ -33,13 +39,13 @@ class CountriesController: UITableViewController {
         return button
     }()
     
-    
     //MARK:- Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         configureSearchController()
+        configureTableView()
     }
     
     //MARK:- Selectors
@@ -51,12 +57,23 @@ class CountriesController: UITableViewController {
     
     //MARK:- Helpers
     
+    func configureTableView() {
+        tableView.backgroundColor = .white
+        
+        tableView.rowHeight = 50
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        view.addSubview(tableView)
+        tableView.frame = view.frame
+        
+    }
     
     func configureUI(){
         view.backgroundColor = .white
         configureNavigationBar(withTitle: "Countries", prefersLargeTitles: false)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: doneButton)
-        
     }
     
     func configureSearchController(){
@@ -75,6 +92,49 @@ class CountriesController: UITableViewController {
     }
     
 }
+
+extension CountriesController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        
+        let selectedView = UIView()
+        selectedView.backgroundColor = .lightGray
+        cell.textLabel?.text = "Test Cell"
+        cell.backgroundColor = .white
+        cell.textLabel?.textColor = .black
+        cell.selectedBackgroundView = selectedView
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+       return hearderTitles[section]
+       
+    }
+   
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor.lightGray
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+    }
+}
+
+
+extension CountriesController: UITableViewDelegate{
+    
+}
+
+
+
+
+
 
 extension CountriesController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {

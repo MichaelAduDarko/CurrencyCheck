@@ -27,7 +27,7 @@ class ConverterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-      
+        
     }
     
     
@@ -37,18 +37,18 @@ class ConverterController: UIViewController {
         view.backgroundColor = .white
         
         configureNavigationBar(withTitle: "Converter", prefersLargeTitles: true)
+        
         view.addSubview(addCountryButton)
         addCountryButton.setDimensions(width: 56, height: 56)
         addCountryButton.layer.cornerRadius = 56 / 2
         addCountryButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 16,
                                 paddingRight: 24)
         
-        
     }
-   
+    
     //MARK:- Selectors
     
-   @objc func showCountries() {
+    @objc func showCountries() {
         
         UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
             self.addCountryButton.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)

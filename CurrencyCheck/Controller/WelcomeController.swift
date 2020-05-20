@@ -80,8 +80,8 @@ class WelcomeController: UIViewController {
         
     }
     
-    
     //MARK: - Helpers
+    
     func configureUI(){
         view.backgroundColor =  .white
         navigationController?.navigationBar.isHidden = true
@@ -114,9 +114,6 @@ class WelcomeController: UIViewController {
         getStartedButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         getStartedButton.centerXAnchor.constraint(equalTo: bg.centerXAnchor).isActive = true
         getStartedButton.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -60).isActive = true
-        
-        
-        
         
     }
 }

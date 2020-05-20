@@ -78,7 +78,6 @@ extension UIView {
         heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
-    
     func addConstraintsToFillView(_ view: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
         anchor(top: view.topAnchor, left: view.leftAnchor,
@@ -87,8 +86,6 @@ extension UIView {
     
     
 }
-
-
 
 extension UIViewController {
     func configureNavigationBar(withTitle title: String, prefersLargeTitles: Bool){
@@ -109,8 +106,6 @@ extension UIViewController {
            navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
        }
 }
-
-
 
 // MARK: - UIColor
 
